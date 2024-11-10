@@ -40,15 +40,10 @@
   color: #ccc;
 }
 
-/* Media query for medium screens */
-@media (max-width: 1024px) {
-  .skills li {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row */
-  }
-}
+
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .skills li {
     flex: 1 1 100%; /* 1 item per row */
   }
