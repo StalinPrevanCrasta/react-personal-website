@@ -1,0 +1,61 @@
+.projects {
+    padding: 20px;
+    background-color: #333;
+    color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it takes the full width of the parent container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .projects h2 {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .projects ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .projects li {
+    line-height: 1.6;
+    color: #ddd;
+    flex: 1 1 calc(33.333% - 10px); /* 3 items per row with a gap of 10px */
+    box-sizing: border-box;
+  }
+
+.projectCard {
+  background-color: #444;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard-card h3 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.project-projectCard p {
+  margin: 0;
+  color: #ccc;
+}
+
+/* Media query for medium screens */
+@media (max-width: 1024px) {
+    .projects li {
+      flex: 1 1 calc(50% - 10px); /* 2 items per row */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .projects li {
+      flex: 1 1 100%; /* 1 item per row */
+    }
+  }
