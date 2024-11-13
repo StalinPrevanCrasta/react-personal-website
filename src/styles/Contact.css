@@ -1,0 +1,68 @@
+.contactMe {
+        padding: 20px;
+        background-color: #333;
+        color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ensure it takes the full width of the parent container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    
+}
+
+.social-media-list li {
+    display: inline;
+    padding: 5px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.left-section {
+    width: 45%;
+}
+
+.right-section {
+    width: 45%;
+}
+
+.contact-list, .social-media-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #242424;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

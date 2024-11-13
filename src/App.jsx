@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
+import Contact from './Contact';
 import './styles/App.css';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       </div>
       <div className="component">
         <Projects />
+      </div>
+      <div className="component">
+        <Contact />
       </div>
     </div>
   );
