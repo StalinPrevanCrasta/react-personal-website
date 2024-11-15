@@ -4,7 +4,6 @@ import './styles/Contact.css';
 function Contact() {
     return (
         <div className="contactMe">
-            <h2>Connect with Me</h2>
             <div className="contact-wrapper">
             <div className="left-section">
                 <form action="" method="POST">

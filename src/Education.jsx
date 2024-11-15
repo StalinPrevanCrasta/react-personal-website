@@ -25,7 +25,6 @@ const educationData = [
 function Education() {
   return (
     <div className="education">
-      <h2>Education</h2>
       {educationData.map((item) => (
         <div key={item.id} className="education-item">
           <h3>{item.institution}</h3>

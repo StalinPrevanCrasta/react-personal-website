@@ -9,11 +9,11 @@ function Navbar() {
         <img src={logo} alt="Logo" />
       </div>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/Contact">Education</a></li>
-        <li><a href="/Projects">Projects</a></li>
-        <li><a href="/Resume">Resume</a></li>
-        <li><a href="/Contact">Contact</a></li>
+        <li><a href="#root">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );
