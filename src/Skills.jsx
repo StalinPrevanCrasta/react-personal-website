@@ -44,7 +44,7 @@ function Skills() {
     <div className="skills">
       <ul>
       {skillList.map(skill => (
-          <li>
+          <li key={skill.id}>
             <img src={skill.logo} alt={skill.name} className="skill-logo" />
           </li>
         ))}
