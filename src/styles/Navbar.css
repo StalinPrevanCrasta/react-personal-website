@@ -12,34 +12,14 @@
 }
 
 .logo img {
-  height: 40px; /* Adjust the height as needed */
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-}
-
-.navbar li {
-  display: inline;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
+  height: 40px;
 }
 
 .menu-icon {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1100; /* Make sure the menu icon is above other elements */
 }
 
 .menu-icon .bar {
@@ -50,19 +30,55 @@
   transition: 0.4s;
 }
 
+.menu-icon.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Reset list styling */
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 1rem;
 }
 
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .menu-icon {
     display: flex;
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    flex-direction: column; /* Arrange links in a column */
     width: 100%;
     position: absolute;
     top: 60px;
@@ -72,22 +88,15 @@
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex; /* Show the links when menu is open */
+  }
+
+  .nav-links ul {
+    flex-direction: column; /* Make links stack vertically */
+    gap: 10px; /* Add some space between links */
   }
 
   .nav-links li {
-    margin: 10px 0;
-  }
-
-  .menu-icon.open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .menu-icon.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-icon.open .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    display: block; /* Display each link in a new line */
   }
 }
