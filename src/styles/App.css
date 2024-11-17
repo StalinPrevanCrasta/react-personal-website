@@ -8,9 +8,10 @@
   gap:20px;
 }
 
-#root:first-child {
-  margin-top: auto;
+#body:first-child {
+  margin-top: 80px;
 }
+
 
 @keyframes wave {
   0% {
