@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-import './styles/Contact.css';
+import '../styles/Contact.css';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import githubLogo from './assets/github.svg';
-import linkedinLogo from './assets/linkedin.svg';
-import gmailLogo from './assets/gmail.svg';
+import githubLogo from '../assets/github.svg';
+import linkedinLogo from '../assets/linkedin.svg';
+import gmailLogo from '../assets/gmail.svg';
 
 function Contact() {
     const form = useRef();

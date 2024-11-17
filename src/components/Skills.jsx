@@ -1,23 +1,23 @@
 import React from 'react';
-import './styles/Skills.css';
-import reactLogo from './assets/react.svg';
-import flaskLogo from './assets/flask.svg';
-import djangoLogo from './assets/django.svg';
-import jsLogo from './assets/js.svg';
-import pythonLogo from './assets/python.svg';
-import htmlLogo from './assets/html5.svg';
-import cssLogo from './assets/css3.svg';
-import javaLogo from './assets/java.svg';
-import seleniumLogo from './assets/selenium.svg';
-import nodejsLogo from './assets/nodejs.svg';
-import mongodbLogo from './assets/mongodb.svg';
-import sqliteLogo from './assets/sqlite.svg';
-import mysqlLogo from './assets/mysql.svg';
-import cLogo from './assets/c.svg';
-import linuxLogo from './assets/linux.svg';
-import gitLogo from './assets/git.svg';
-import bootstrapLogo from './assets/bootstrap.svg';
-import jqueryLogo from './assets/jquery.svg';
+import '../styles/Skills.css';
+import reactLogo from '../assets/react.svg';
+import flaskLogo from '../assets/flask.svg';
+import djangoLogo from '../assets/django.svg';
+import jsLogo from '../assets/js.svg';
+import pythonLogo from '../assets/python.svg';
+import htmlLogo from '../assets/html5.svg';
+import cssLogo from '../assets/css3.svg';
+import javaLogo from '../assets/java.svg';
+import seleniumLogo from '../assets/selenium.svg';
+import nodejsLogo from '../assets/nodejs.svg';
+import mongodbLogo from '../assets/mongodb.svg';
+import sqliteLogo from '../assets/sqlite.svg';
+import mysqlLogo from '../assets/mysql.svg';
+import cLogo from '../assets/c.svg';
+import linuxLogo from '../assets/linux.svg';
+import gitLogo from '../assets/git.svg';
+import bootstrapLogo from '../assets/bootstrap.svg';
+import jqueryLogo from '../assets/jquery.svg';
 
 function Skills() {
   const skillList = [

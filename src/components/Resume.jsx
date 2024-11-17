@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { Twemoji } from 'react-emoji-render';
-import './styles/Resume.css';
+import '../styles/Resume.css';
 
 const ResumeViewer = () => {
   const googleDriveLink = import.meta.env.VITE_GOOGLE_DRIVE_LINK;
+  const resumeImageUrl = import.meta.env.VITE_RESUME_IMAGE_URL;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +17,7 @@ const ResumeViewer = () => {
       </div>
       <div id="resume-body">
         <img 
-          src={`${import.meta.env.BASE_URL}StalinPrevanCrasta_Resume.png`} 
+          src={`${import.meta.env.BASE_URL}${resumeImageUrl}`} 
           alt="Resume" 
           width="100%" 
         />

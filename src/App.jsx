@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import About from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
-import Education from './Education';
-import Resume from './Resume';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Resume from './components/Resume';
 import { Twemoji } from 'react-emoji-render';
 import './styles/App.css';
 
@@ -53,7 +53,6 @@ function App() {
               </>
             }
           />
-          {/* Separate Route for Resume Page */}
           <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>

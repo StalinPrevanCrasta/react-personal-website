@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Education.css';
+import '../styles/Education.css';
 
 const educationData = [
   {
