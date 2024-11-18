@@ -2,6 +2,8 @@
 
 This is a personal portfolio project built with React and Vite. It includes sections for About Me, Skills, Education, Projects, Contact, and a Resume.
 
+**[View the live website here](stalincrasta.xyz)**
+
 ## Table of Contents
 
 - [Installation](#installation)
