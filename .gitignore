@@ -26,5 +26,3 @@ dist-ssr
 # Ignore environment variables
 .env
 
-# Ignore specific PNG file in the public directory
-public/StalinPrevanCrasta_Resume.png
