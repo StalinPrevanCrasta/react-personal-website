@@ -8,6 +8,11 @@
   gap:20px;
 }
 
+body {
+  background-color: #242424;
+  color:#fff;
+}
+
 #body:first-child {
   margin-top: 80px;
 }
