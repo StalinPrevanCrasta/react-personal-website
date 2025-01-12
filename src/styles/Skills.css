@@ -32,9 +32,40 @@
   line-height: 1.6;
   color: #ddd;
   box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
+.skills li:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  transform: translateX(-50%);
+  background-color: #5a5a5a;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10; /* Ensure the tooltip is above other elements */
+}
 
-
+.skills li:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 90%; /* Slightly overlaps the tooltip box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px; /* Adjust for triangle size */
+  border-style: solid;
+  border-color: #5a5a5a transparent transparent transparent;  /* Creates the triangle */
+  z-index: 9; /* Below the tooltip text but above other elements */
+}
 
 

@@ -17,7 +17,6 @@ import cLogo from '../assets/c.svg';
 import linuxLogo from '../assets/linux.svg';
 import gitLogo from '../assets/git.svg';
 import bootstrapLogo from '../assets/bootstrap.svg';
-import jqueryLogo from '../assets/jquery.svg';
 
 function Skills() {
   const skillList = [
@@ -38,13 +37,12 @@ function Skills() {
     { id: 15, name: 'Linux', logo: linuxLogo },
     { id: 16, name: 'Git', logo: gitLogo },
     { id: 17, name: 'BootStrap', logo: bootstrapLogo },
-    { id: 18, name: 'JQuery', logo: jqueryLogo },
   ];
   return (
     <div className="skills">
       <ul>
       {skillList.map(skill => (
-          <li key={skill.id}>
+          <li key={skill.id} title={skill.name}>
             <img src={skill.logo} alt={skill.name} className="skill-logo" />
           </li>
         ))}
