@@ -1,32 +1,52 @@
-import React, { useEffect } from 'react';
-import { Twemoji } from 'react-emoji-render';
+import { useEffect, useState } from 'react';
 import '../styles/Resume.css';
 
 const ResumeViewer = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const googleDriveLink = import.meta.env.VITE_GOOGLE_DRIVE_LINK;
-  const resumeImageUrl = import.meta.env.VITE_RESUME_IMAGE_URL;
+
+  // Extract file ID and build embed preview URL
+  const fileId = googleDriveLink.match(/\/d\/(.+?)\//)?.[1];
+  const embedLink = fileId
+    ? `https://drive.google.com/file/d/${fileId}/preview?usp=sharing&embedded=true&rm=minimal`
+    : googleDriveLink;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
-    
-    <div id="resume-container">
-      <div id="resume-heading">
-        <h1><Twemoji text="📄" /> My Resume</h1>
-      </div>
-      <div id="resume-body">
-        <img 
-          src={`${import.meta.env.BASE_URL}${resumeImageUrl}`} 
-          alt="Resume" 
-          width="100%" 
-        />
-      </div>
-      <div id="resume-download">
-        <a href={googleDriveLink} download>
-          <button>Download Resume</button>
-        </a>
-      </div>
+    <div className="resume-container">
+      <h2 className="resume-title">My Resume</h2>
+      {isLoading ? (
+        <div className="resume-loading">
+          <div className="loading-spinner"></div>
+          <p>Loading resume...</p>
+        </div>
+      ) : (
+        <div className="resume-embed">
+          <iframe
+            src={embedLink}
+            title="Resume"
+            style={{
+              width: '100vw',
+              height: 'calc(100vh - 3rem)',
+              border: 'none',
+              position: 'fixed',
+              top: '3rem',
+              left: 0,
+              margin: 0,
+              padding: 0
+            }}
+            allow="autoplay"
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 };
