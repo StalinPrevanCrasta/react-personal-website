@@ -92,4 +92,19 @@ h1, h2, h3, h4, h5, h6 {
   transform: scaleX(1);
 }
 
+.hero .my-name {
+  position: relative;
+  color: #ff9800;
+  transition: color 0.3s;
+}
+
+/* Remove underline animation for .my-name */
+.hero .my-name::after {
+  display: none;
+}
+
+.hero .my-name:hover {
+  color: #63b4ff;
+}
+
 

@@ -8,7 +8,6 @@ import pythonLogo from '../assets/python.svg';
 import htmlLogo from '../assets/html5.svg';
 import cssLogo from '../assets/css3.svg';
 import javaLogo from '../assets/java.svg';
-import seleniumLogo from '../assets/selenium.svg';
 import nodejsLogo from '../assets/nodejs.svg';
 import mongodbLogo from '../assets/mongodb.svg';
 import sqliteLogo from '../assets/sqlite.svg';
@@ -28,15 +27,14 @@ function Skills() {
     { id: 6, name: 'HTML', logo: htmlLogo },
     { id: 7, name: 'CSS', logo: cssLogo },
     { id: 8, name: 'Java', logo: javaLogo },
-    { id: 9, name: 'Selenium', logo: seleniumLogo },
-    { id: 10, name: 'NodeJs', logo: nodejsLogo },
-    { id: 11, name: 'MongoDB', logo: mongodbLogo },
-    { id: 12, name: 'SqLite3', logo: sqliteLogo },
-    { id: 13, name: 'MySql', logo: mysqlLogo },
-    { id: 14, name: 'C', logo: cLogo },
-    { id: 15, name: 'Linux', logo: linuxLogo },
-    { id: 16, name: 'Git', logo: gitLogo },
-    { id: 17, name: 'BootStrap', logo: bootstrapLogo },
+    { id: 9, name: 'NodeJs', logo: nodejsLogo },
+    { id: 10, name: 'MongoDB', logo: mongodbLogo },
+    { id: 11, name: 'SqLite3', logo: sqliteLogo },
+    { id: 12, name: 'MySql', logo: mysqlLogo },
+    { id: 13, name: 'C', logo: cLogo },
+    { id: 14, name: 'Linux', logo: linuxLogo },
+    { id: 15, name: 'Git', logo: gitLogo },
+    { id: 16, name: 'BootStrap', logo: bootstrapLogo },
   ];
   return (
     <div className="skills">
