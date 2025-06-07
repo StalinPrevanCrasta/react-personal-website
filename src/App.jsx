@@ -26,9 +26,9 @@ function App() {
             path="/"
             element={
               <>
-                <div id="home" className="component">
+                <div id="home" className="hero">
                   <h1>Hi There! <Twemoji text="👋" className="interactive-emoji" /></h1>
-                  <h1>I'M <span style={{ color: '#DDC1A6' }}> STALIN PREVAN CRASTA </span></h1>
+                  <h1>I'M <span style={{ color: '#' }}> STALIN PREVAN CRASTA </span></h1>
                 </div>
                 <div className="component">
                   <h2><Twemoji text="👀" /> About Me</h2>

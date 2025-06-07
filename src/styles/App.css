@@ -6,11 +6,26 @@
   display:flex;
   flex-direction: column;
   gap:20px;
+  background-color: transparent;
 }
 
 body {
-  background-color: #242424;
+  /* background-color: #000000; */
   color:#fff;
+}
+
+.component, .about, .skills, .projects, .education, .contactMe {
+  padding-top: 5px;
+  background: #23272f;
+  color: #f9f9f9;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: none;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
 }
 
 #body:first-child {

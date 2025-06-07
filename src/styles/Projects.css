@@ -1,9 +1,9 @@
 .projects {
-    padding: 20px;
-    background-color: #333;
-    color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: var(--padding);
+    background: #23272f; /* Set background to dark grey */
+    color: #f9f9f9; /* Set text color to light for contrast */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     width: 100%; /* Ensure it takes the full width of the parent container */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
@@ -29,11 +29,11 @@
   }
 
 .projectCard {
-  background-color: #444;
+  background-color: transparent;
   padding: 15px;
   margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .projectCard-card h3 {

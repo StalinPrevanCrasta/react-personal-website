@@ -5,12 +5,17 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --background-color-light: #162447; /* Navy shade for consistency */
+  --box-shadow: 0 2px 4px rgb(0, 0, 0);
+  --border-radius: 8px;
+  --padding: 20px;
 }
 
 a {
@@ -25,9 +30,27 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  background: #0a1433 url('hellooo.jpeg') no-repeat;
+  background-blend-mode: darken; /* Blend the image with a dark navy blue */
+  background-size: cover; /* Maintain aspect ratio */
+  background-attachment: fixed; /* Ensure the image stays fixed during scroll */
+  color: #f9f9f9; /* Light text color */
+  animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 h1 {
@@ -42,7 +65,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #111111;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -56,7 +79,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #111111;
     background-color: #ffffff;
   }
   a:hover {
@@ -64,5 +87,59 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  margin-top: -20px;
+  padding-top: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -100;
+  margin-top: -20px;
+  padding-top: 0;
+}
+
+.hero h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  z-index: 1;
+  margin-top: 0;
+}
+
+.hero .highlight {
+  color: #fff;
+  background: linear-gradient(90deg, #e91e63, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 4rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3rem; /* Further adjust font size for very small screens */
   }
 }

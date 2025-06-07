@@ -1,9 +1,9 @@
 .skills {
-  padding: 20px;
-  background-color: #333;
+  padding: var(--padding);
+  background: #23272f;
   color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -16,7 +16,7 @@
 
 .skills h2 {
   margin-bottom: 10px;
-  color: #fff;
+  color: #f9f9f9;
 }
 
 .skills ul {
@@ -44,12 +44,12 @@
   left: 50%;
   margin-bottom: 10px;
   transform: translateX(-50%);
-  background-color: #5a5a5a;
+  background-color: #111111;
   color: #fff;
   padding: 10px 10px;
   border-radius: 4px;
   white-space: nowrap;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   opacity: 1;
   visibility: visible;
   transition: opacity 0.2s ease-in-out;

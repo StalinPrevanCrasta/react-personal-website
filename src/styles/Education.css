@@ -1,8 +1,8 @@
 .education {
-    padding: 20px;
-    background-color: #333;
-    border-radius: 8px;
-    margin: 20px 0;
+    padding: var(--padding);
+    background: #23272f;
+    color: #f9f9f9;
+    border-radius: var(--border-radius);
   }
   
   .education h2 {
@@ -14,9 +14,10 @@
   .education-item {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #444;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #23272f;
+    color: #f9f9f9;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
   }
   
   .education-item h3 {
