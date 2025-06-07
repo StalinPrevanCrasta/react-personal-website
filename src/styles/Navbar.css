@@ -1,5 +1,5 @@
 .navbar {
-  background-color: transparent;
+  background-color: #23272f; /* Changed to dark grey for consistency */
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -83,7 +83,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: var(--background-color-light);
+    background-color: #23272f; /* Dark grey for mobile nav background */
     padding: 1rem;
   }
 
