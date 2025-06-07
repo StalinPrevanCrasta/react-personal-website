@@ -12,10 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-color-light: #162447; /* Navy shade for consistency */
-  --box-shadow: 0 2px 4px rgb(0, 0, 0);
-  --border-radius: 8px;
-  --padding: 20px;
 }
 
 a {
