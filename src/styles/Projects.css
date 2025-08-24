@@ -1,5 +1,6 @@
 .projects {
     padding: var(--padding);
+    padding-bottom: 2.5rem;
     background: #23272f; /* Set background to dark grey */
     color: #f9f9f9; /* Set text color to light for contrast */
     border-radius: var(--border-radius);
