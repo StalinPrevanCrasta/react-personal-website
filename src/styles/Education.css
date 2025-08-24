@@ -3,7 +3,7 @@
     background: #23272f;
     color: #f9f9f9;
     border-radius: var(--border-radius);
-    padding-bottom: 2.5rem;
+    padding: 2rem;
   }
   
   .education h2 {

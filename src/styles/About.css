@@ -1,6 +1,6 @@
 .about {
     padding: var(--padding);
-    padding-bottom: 2.5rem;
+    padding: 2rem;
     background: #23272f; /* Changed to dark grey */
     color: #f9f9f9; /* Changed to light color for contrast */
     border-radius: var(--border-radius);

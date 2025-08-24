@@ -7,7 +7,7 @@
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding-bottom: 2.5rem; /* extra bottom spacing */
+  padding: 2rem; 
 }
 
 .skill-logo {
