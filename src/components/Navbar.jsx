@@ -8,9 +8,12 @@ function Navbar() {
   const navigate = useNavigate();
 
   // Function to handle navigation back to the main page and scroll to a section
-  const handleNavigation = (hash) => {
+  // Accepts the click event so we can prevent the anchor's default jump behavior
+  const handleNavigation = (event, hash) => {
+    if (event && event.preventDefault) event.preventDefault();
     navigate('/');
     setIsOpen(false); // Close the menu when navigating
+    // Wait a short moment for the route/navigation to settle, then scroll
     setTimeout(() => {
       const section = document.querySelector(hash);
       if (section) {
@@ -38,19 +41,19 @@ function Navbar() {
       <nav className={`nav-links ${isOpen ? 'open' : ''}`}>
         <ul>
           <li>
-            <a href="#home" onClick={() => handleNavigation('#home')}>Home</a>
+            <a href="#home" onClick={(e) => handleNavigation(e, '#home')}>Home</a>
           </li>
           <li>
-            <a href="#education" onClick={() => handleNavigation('#education')}>Education</a>
+            <a href="#education" onClick={(e) => handleNavigation(e, '#education')}>Education</a>
           </li>
           <li>
-            <a href="#projects" onClick={() => handleNavigation('#projects')}>Projects</a>
+            <a href="#projects" onClick={(e) => handleNavigation(e, '#projects')}>Projects</a>
           </li>
           <li>
             <Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
           </li>
           <li>
-            <a href="#contact" onClick={() => handleNavigation('#contact')}>Contact</a>
+            <a href="#contact" onClick={(e) => handleNavigation(e, '#contact')}>Contact</a>
           </li>
         </ul>
       </nav>
