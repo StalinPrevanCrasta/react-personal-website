@@ -29,8 +29,11 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background: #0a1433 url('hellooo.jpeg') no-repeat;
-  background-blend-mode: darken; /* Blend the image with a dark navy blue */
+  /* Use absolute path to public asset so it resolves correctly in production */
+  /* Use a translucent black overlay on top of the image to darken it without tinting */
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/hellooo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover; /* Maintain aspect ratio */
   background-attachment: fixed; /* Ensure the image stays fixed during scroll */
   color: #f9f9f9; /* Light text color */
