@@ -1,62 +1,86 @@
+/* Projects section - card grid */
 .projects {
-    padding: var(--padding);
-    padding: 2rem;
-    background: #23272f; /* Set background to dark grey */
-    color: #f9f9f9; /* Set text color to light for contrast */
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    width: 100%; /* Ensure it takes the full width of the parent container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  }
-  
-  .projects h2 {
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .projects ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .projects li {
-    line-height: 1.6;
-    color: #ddd;
-    flex: 1 1 calc(33.333% - 10px); /* 3 items per row with a gap of 10px */
-    box-sizing: border-box;
-  }
-
-.projectCard {
-  background-color: transparent;
-  padding: 15px;
-  margin-bottom: 10px;
+  padding: 2rem;
+  background: #23272f;
+  color: #f9f9f9;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.projectCard-card h3 {
-  margin: 0 0 10px;
-  color: #fff;
-}
-
-.project-projectCard p {
-  margin: 0;
-  color: #ccc;
-}
-
-/* Media query for medium screens */
-@media (max-width: 1024px) {
-    .projects li {
-      flex: 1 1 calc(50% - 10px); /* 2 items per row */
+.projects h2 {
+      margin-bottom: 1rem;
+      color: #fff;
     }
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .projects li {
-      flex: 1 1 100%; /* 1 item per row */
+
+    .projects ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
     }
+
+    .projects li {
+      box-sizing: border-box;
+    }
+
+    /* Card */
+    .projectCard {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.04);
+      padding: 1.25rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .projectCard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.55);
+    }
+
+    .projectCard h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .projectCard p {
+      margin: 0;
+      color: #d1d5db;
+      line-height: 1.45;
+      font-size: 0.95rem;
+      flex: 1 1 auto;
+    }
+
+    .projectCard .meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+
+    .projectBadge {
+      background: rgba(100, 140, 255, 0.12);
+      color: #9fb0ff;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 1rem;
   }
+  .projectCard {
+    padding: 1rem;
+  }
+}
