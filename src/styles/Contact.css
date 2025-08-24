@@ -60,6 +60,7 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: transparent;
+    color: inherit;
     
 }
 
@@ -97,4 +98,27 @@ form button:hover {
     margin-top: 7px;
     width: 50px;
     height: 50px;
+}
+
+/* Respect user's light color scheme: use a light background with dark text */
+@media (prefers-color-scheme: light) {
+    .contactMe {
+        background: #f9f9f9; /* light card bg */
+        color: #111111; /* dark text for readability */
+        box-shadow: var(--box-shadow);
+    }
+
+    /* Ensure form controls inherit the readable text color on light theme */
+    .contactMe form input,
+    .contactMe form textarea,
+    .contactMe form button {
+        color: inherit;
+        background-color: transparent;
+        border-color: #ccc;
+    }
+
+    .contactMe form input::placeholder,
+    .contactMe form textarea::placeholder {
+        color: #6b6b6b;
+    }
 }
