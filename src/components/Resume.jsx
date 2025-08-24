@@ -3,13 +3,11 @@ import '../styles/Resume.css';
 
 const ResumeViewer = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const googleDriveLink = import.meta.env.VITE_GOOGLE_DRIVE_LINK;
+  // Resume URL: prefer env var for flexibility, fallback to the provided Vercel storage URL
+  const resumeUrl = 'https://oqppgbity5gb8c4k.public.blob.vercel-storage.com/Stalin_Prevan_Crasta_Resume.pdf';
 
-  // Extract file ID and build embed preview URL
-  const fileId = googleDriveLink.match(/\/d\/(.+?)\//)?.[1];
-  const embedLink = fileId
-    ? `https://drive.google.com/file/d/${fileId}/preview?usp=sharing&embedded=true&rm=minimal`
-    : googleDriveLink;
+  // Use the direct URL for embedding (works for PDF files served with correct headers)
+  const embedLink = resumeUrl;
 
   useEffect(() => {
     // Simulate loading time for better UX
